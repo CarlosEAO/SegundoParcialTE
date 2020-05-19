@@ -36,47 +36,47 @@
                  <div class="row">
                      <div class="col-md-12">
                         <label for="name">Nombre</label>
-                         <input class="form-control" type="text" id="name" name="" required>                         
+                         <input class="form-control" type="text" id="name" name="name" required>                         
                      </div>
                      <div class="col-md-12">
-                        <label for="ap">Apellido</label>
-                         <input class="form-control" type="text" id="ap" name="" required>  
+                        <label for="lastname">Apellido</label>
+                         <input class="form-control" type="text" id="lastname" name="lastname" required>  
                      </div>
                  </div>
                  <div class="row">
                      <div class="col">
                         <label for="grade">Grado</label>
-                         <input class="form-control" type="text" id="grade" name="" required>                         
+                         <input class="form-control" type="text" id="grade" name="grade" required>                         
                      </div>
                      <div class="col">
                         <label for="group">Grupo</label>
-                         <input class="form-control" type="text" id="group" maxlength="1" name="" required>  
+                         <input class="form-control" type="text" id="group" maxlength="1" name="group" required>  
                      </div>
                  </div>
                  <div class="row">
                      <div class="col">
                         <label for="grade1">Califiacion 1</label>
-                         <input id="grade1" class="form-control" type="number" min="0" max="10" step="0.01" name="" required>                         
+                         <input id="grade1" class="form-control" type="number" min="0" max="10" step="0.01" name="grade1" required>                         
                      </div>
                      <div class="col">
                         <label for="grade2">Califiacion 2</label>
-                         <input id="grade2" class="form-control" type="number" min="0" max="10" step="0.01" name="" required>  
+                         <input id="grade2" class="form-control" type="number" min="0" max="10" step="0.01" name="grade2" required>  
                      </div>
                  </div>
                  <div class="row">
                      <div class="col">
                         <label for="grade3">Califiacion 3</label>
-                         <input id="grade3" class="form-control" type="number" min="0" max="10" step="0.01" name="" required>                         
+                         <input id="grade3" class="form-control" type="number" min="0" max="10" step="0.01" name="grade3" required>                         
                      </div>
                      <div class="col">
                         <label for="grade4">Califiacion 4</label>
-                         <input id="grade4" class="form-control" type="number" min="0" max="10" step="0.01" name="" required>  
+                         <input id="grade4" class="form-control" type="number" min="0" max="10" step="0.01" name="grade4" required>  
                      </div>
                  </div>
                  <div class="row">
                      <div class="col-md-6 col-sm-6">
                         <label for="grade5">Califiacion 5</label>
-                         <input id="grade5" class="form-control" type="number" min="0" max="10" step="0.01" name="" required>                         
+                         <input id="grade5" class="form-control" type="number" min="0" max="10" step="0.01" name="grade5" required>                         
                      </div> 
                  </div>
                  <div class="row my-4">

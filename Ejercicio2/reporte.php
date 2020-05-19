@@ -1,3 +1,46 @@
+<?php
+  extract($_POST);
+
+  $prom_fin = (($grade1+$grade2+$grade3+$grade4+$grade5));
+
+  $prom = (($prom_fin/5));
+  
+  $prom_fin = round($prom);
+
+  if($prom_fin>=6){
+    $status = "Aprobado";
+  }
+  else{
+    $status = "Reprobado";
+  }
+
+      //////////////////////////////////////////
+    // CONEXION DB
+    //////////////////////////////////////////
+
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "ExamenParcial2";
+
+    try {
+        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+        // set the PDO error mode to exception
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $sql = "INSERT INTO ejercicio2 (nom, apps, grado,grupo,cal_1,cal_2,cal_3,cal_4,cal_5, prom_fin,`status`)
+        VALUES ('$name', '$lastname', '$grade', '$group', '$grade1', '$grade2', '$grade3', '$grade4', '$grade5', '$prom_fin', '$status')";
+        // use exec() because no results are returned
+        $conn->exec($sql);
+        echo "New record created successfully";
+    } catch(PDOException $e) {
+        echo $sql . "<br>" . $e->getMessage();
+    }
+
+    $conn = null;
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,16 +71,16 @@
             <tr>
               <th scope="col">Id</th>
               <th scope="col">Nombre</th>
-              <th scope="col">Grupo</th>
               <th scope="col">Grado</th>
+              <th scope="col">Grupo</th>
             </tr>
           </thead>
        <tbody>
            <tr>
                <td id="">161231</td>
-               <td id="">Isaac Esquviel R</td>
-               <td id="">Sexto</td>
-               <td id="">A</td>
+               <td id=""><?php echo $name." ".$lastname;?></td>
+               <td id="grade"><?php echo $grade;?></td>
+               <td id="group"><?php echo $group;?></td>
            </tr>
        </tbody>
         
@@ -52,35 +95,42 @@
           <tbody>
             <tr>
               <th scope="row">Calificacion 1</th>
-              <td id="">10</td>
+              <td id="grade1"><?php echo $grade1; ?></td>
 
             </tr>
             <tr>
               <th scope="row">Calificacion 2</th>
-              <td id="">7</td>
+              <td id="grade2"><?php echo $grade2 ?></td>
             </tr>
             <tr>
               <th scope="row">Calificacion 3</th>
-              <td id="">6.5</td>
+              <td id="grade3"><?php echo $grade3; ?></td>
             </tr>
             <tr>
                <th scope="row">Calificacion 4</th>
-                <td id="">9</td>
+                <td id="grade4"><?php echo $grade4; ?></td>
             </tr>
             <tr>
                <th scope="row">Calificacion 5</th>
-                <td id="">5</td>
+                <td id="grade5"><?php echo $grade5; ?></td>
+            </tr>
+            <tr class="table-secondary">
+                <th  scope="row">Promedio</th>
+                <td  id="prom"><?php echo $prom; ?></td>
             </tr>
             <tr class="table-secondary">
                 <th  scope="row">Promedio Final</th>
-                <td  id="">0</td>
+                <td  id="prom_fin"><?php echo $prom_fin; ?></td>
             </tr>
             <tr class="table-secondary">
                 <th scope="row">Status</th>
-                <td id="">Reprobado</td>
+                <td id="status" style="color:red"><?php echo $status; ?></td>
             </tr>
           </tbody>
         </table>
+        <form action="index.php">
+          <button type="submit" class="btn btn-success">Registrar otro alumno</button>
+        </form>
     
 </div>
 
