@@ -12,12 +12,12 @@ function validate(){
 
     
     
-    if(!/^[a-zA-Z]+$/.test(nameInput.value) || !/^[a-zA-Z]+$/.test(lastnameInput.value)){
+    if(!/^[ a-zA-Z]+$/.test(nameInput.value) || !/^[ a-zA-Z]+$/.test(lastnameInput.value)){
         alert("El nombre y apellidos solo pueden contener letras");
         return false;
     }
 
-    if(nameInput.value=="" || lastnameInput.value=="" || ageInput.value=="" || groupInput.value=="" || contractInput.value=="" || zoneInput.value=="" || ltInput.value==""){
+    if(nameInput.value=="" || lastnameInput.value=="" || ageInput.value=="" ||domInput.value=="" || groupInput.value=="" || contractInput.value=="" || zoneInput.value=="" || ltInput.value==""){
         alert("Todos los campos deben estar llenados");
         return false;
     }

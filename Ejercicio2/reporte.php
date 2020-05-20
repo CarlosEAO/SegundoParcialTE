@@ -14,7 +14,7 @@
     $status = "Reprobado";
   }
 
-      //////////////////////////////////////////
+    //////////////////////////////////////////
     // CONEXION DB
     //////////////////////////////////////////
 
@@ -22,6 +22,7 @@
     $username = "root";
     $password = "";
     $dbname = "ExamenParcial2";
+    $id = 0;
 
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -31,10 +32,13 @@
         VALUES ('$name', '$lastname', '$grade', '$group', '$grade1', '$grade2', '$grade3', '$grade4', '$grade5', '$prom_fin', '$status')";
         // use exec() because no results are returned
         $conn->exec($sql);
+        $id = $conn->lastInsertId();
         echo "Datos insertados correctamente";
     } catch(PDOException $e) {
         echo $sql . "<br>" . $e->getMessage();
     }
+
+    
 
     $conn = null;
 
@@ -77,7 +81,7 @@
           </thead>
        <tbody>
            <tr>
-               <td id="">161231</td>
+               <td id=""><?php echo $id;?></td>
                <td id=""><?php echo $name." ".$lastname;?></td>
                <td id="grade"><?php echo $grade;?></td>
                <td id="group"><?php echo $group;?></td>

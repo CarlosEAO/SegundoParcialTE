@@ -14,7 +14,7 @@ function validate(){
 
     
     
-    if(!/^[a-zA-Z]+$/.test(nameInput.value) || !/^[a-zA-Z]+$/.test(lastnameInput.value)){
+    if(!/^[ a-zA-Z]+$/.test(nameInput.value) || !/^[ a-zA-Z]+$/.test(lastnameInput.value)){
         alert("El nombre y apellidos solo pueden contener letras");
         return false;
     }
