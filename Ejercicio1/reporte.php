@@ -7,7 +7,7 @@
     switch($selectDel){
         case "obregon":
             $valorm2 = 1256.20;
-            $delegacion ="Alvaro Obregon"; 
+            $delegacion ="Alvaro Obregon";
         break;
         case "azca":
             $valorm2 = 1300.52;
@@ -132,7 +132,7 @@
     }
 
     $conn = null;
-    
+
 
 ?>
 
@@ -142,7 +142,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/reporte.css">
 
     <!-------GOOGLE FONTS------------>
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
@@ -156,36 +156,38 @@
         <h3 id="titulo">Cálculo del impuesto predial</h3>
     </div>
 
-    <div class="container-fluid" id="cf1">
+    <div class="container" id="cf1">
 
+        <div class="row">
+            <div class="mx-auto">
 
+                Nombre del titular: <br>
+                <?php echo $nombreTitular." ".$apellidosTitular;?><br>
+                Edad: <br>
+                <?php echo $edad;?><br>
+                Número de cuenta catastral: <br>
+                <?php echo $cuenta;?><br>
+                Domicilio: <br>
+                <?php echo $domicilio;?><br>
+                Delegación: <br>
+                <?php echo $delegacion;?><br>
+                Valor catastral = area del Predio * valor m2 de la delegación =
+                <?php echo $areaP. " * ".$valorm2." = ".$valorCatastral; ?><br>
+                Tipo del Predio<br>
+                <?php echo $selectTipoP;?><br>
+                Impuesto = valor catastral * factor del tipo de Predio =
+                <?php echo $valorCatastral. " * ".$factor." = ".$impuesto; ?><br>
+                Impuesto Ajustado:
+                <?php echo $impuestoAjustado?><br>
+                Descuento por tercera edad:
+                <?php echo $descEdad; ?><br>
+                <?php echo $impuestoDescEdad;?><br>
+                Descuento por pago con tarjeta:
+                <?php echo $descTarjeta; ?><br>
+                <?php echo $impuestoFinal;?><br>
 
-        Nombre del titular: <br>
-        <?php echo $nombreTitular." ".$apellidosTitular;?><br>
-        Edad: <br>
-        <?php echo $edad;?><br>
-        Número de cuenta catastral: <br>
-        <?php echo $cuenta;?><br>
-        Domicilio: <br>
-        <?php echo $domicilio;?><br>
-        Delegación: <br>
-        <?php echo $delegacion;?><br>
-        Valor catastral = area del Predio * valor m2 de la delegación =
-        <?php echo $areaP. " * ".$valorm2." = ".$valorCatastral; ?><br>
-        Tipo del Predio<br>
-        <?php echo $selectTipoP;?><br>
-        Impuesto = valor catastral * factor del tipo de Predio = 
-        <?php echo $valorCatastral. " * ".$factor." = ".$impuesto; ?><br>
-        Impuesto Ajustado: 
-        <?php echo $impuestoAjustado?><br>
-        Descuento por tercera edad:
-        <?php echo $descEdad; ?><br>
-        <?php echo $impuestoDescEdad;?><br>
-        Descuento por pago con tarjeta:
-        <?php echo $descTarjeta; ?><br>
-        <?php echo $impuestoFinal;?><br>
-
-
+            </div>
+        </div>
 
         <div class="row my-2" id="rowR" >
             <div class="col">
@@ -195,9 +197,9 @@
         </div>
 
         <div class="row my-2">
-            <div class="col">
+            <div class="mx-auto">
                 <form action="index.php">
-                    <button type="submit" class="btn btn-dark" name="">Registrar otro pago</button>                
+                    <button type="submit" class="btn btn-dark" name="">Registrar otro pago</button>
                 </form>
             </div>
          </div>

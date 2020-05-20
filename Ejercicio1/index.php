@@ -110,7 +110,7 @@
                 <button type="submit" class="btn btn-dark" id="submit">Calcular Impuesto Predial y guardar registro en la bd</button>
             </div>
          </div>
-         
+
 
     </div>
 
