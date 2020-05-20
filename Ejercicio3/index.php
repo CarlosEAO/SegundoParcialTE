@@ -22,45 +22,52 @@
                      <img src="img/logo.png" alt="">
                  </div>
              </div>
-             <form action="">
+             <form action="reporte.php" method="post">
                 <div class="row">
                     <div class="col-md-6 col-sm-12">
-                        <label for="na">Nombre del Titular</label>
-                        <input class="form-control" type="text" id="na" name="" required>
+                        <label for="name">Nombre del Titular</label>
+                        <input class="form-control" type="text" id="name" name="name" required>
                     </div>
                     <div class="col-md-6 col-sm-12">
-                        <label for="ap">Apellidos del Titular</label>
-                        <input class="form-control" type="text" id="ap" name="" required>
+                        <label for="lastname">Apellidos del Titular</label>
+                        <input class="form-control" type="text" id="lastname" name="lastname" required>
                     </div>
                 </div>
                 <div class="row">
                    <div class="col-md-6">
                        <label for="age">Edad</label>
-                       <input class="form-control" type="number" min="1" id="age" name="" required>
+                       <input class="form-control" type="number" min="1" id="age" name="age" required>
                    </div>
                </div>
                 <div class="row">
                    <div class="col">
                        <label for="dom">Domicilio</label>
-                       <input class="form-control" type="text" id="dom" name="" required>
+                       <input class="form-control" type="text" id="dom" name="dom" required>
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="col">
+                       <label for="contract">Num de contrato</label>
+                       <input class="form-control" type="text" id="contract" name="contract" required>
                    </div>
                </div>
                 <div class="row">
                <div class="col">
                    <label for="zone">Zona habitacional</label>
-                   <select class="form-control" id="zone" name="" required>
+                   <select class="form-control" id="zone" name="zone" required>
                        <option selected disabled value="">Elija...</option>
-                       <option value="">A</option>
-                       <option value="">B</option>
-                       <option value="">C</option>
-                       <option value="">D</option>
+                       <option value="A">A</option>
+                       <option value="B">B</option>
+                       <option value="C">C</option>
+                       <option value="D">D</option>
+                       <option value="E">E</option>
                    </select>
                </div>
            </div>
                  <div class="row">
                    <div class="col">
                        <label for="lt">Consumo</label>
-                     <input class="form-control" type="number" min="1" aria-describedby="ayuda" id="lt" name="" required>
+                     <input class="form-control" type="number" min="1" aria-describedby="ayuda" id="lt" name="lt" required>
                      <small id="ayuda" class="form-text text-muted">Metros cubicos consumidos</small>
                    </div>
                </div>
@@ -71,14 +78,6 @@
                    </div>
                </div>
              </form>
-              <div class="row">
-                  <div class="col-md-6">
-                      <h5>Total a pagar: </h5>
-                  </div>
-                  <div class="col-md-3" id="result">
-                      <div id="">$1000</div>
-                  </div>
-              </div>
           </div>
         </div>
     </div>

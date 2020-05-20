@@ -160,24 +160,29 @@
 
 
 
-        <?php echo "Nombre del titular:"; ?><br>
+        Nombre del titular: <br>
         <?php echo $nombreTitular." ".$apellidosTitular;?><br>
-        <?php echo "Edad:"; ?><br>
+        Edad: <br>
         <?php echo $edad;?><br>
-        <?php echo "Número de cuenta catastral"; ?><br>
+        Número de cuenta catastral: <br>
         <?php echo $cuenta;?><br>
-        <?php echo "Domicilio:"; ?><br>
+        Domicilio: <br>
         <?php echo $domicilio;?><br>
-        <?php echo "Delegación"; ?><br>
+        Delegación: <br>
         <?php echo $delegacion;?><br>
-        <?php echo "Valor catastral = area del Predio * valor m2 de la delegación = ".$areaP. " * ".$valorm2." = ".$valorCatastral; ?><br>
-        <?php echo "Tipo del Predio"; ?><br>
+        Valor catastral = area del Predio * valor m2 de la delegación =
+        <?php echo $areaP. " * ".$valorm2." = ".$valorCatastral; ?><br>
+        Tipo del Predio<br>
         <?php echo $selectTipoP;?><br>
-        <?php echo "Impuesto = valor catastral * factor del tipo de Predio = ".$valorCatastral. " * ".$factor." = ".$impuesto; ?><br>
-        <?php echo "Impuesto Ajustado: ". $impuestoAjustado?><br>
-        <?php echo "Descuento por tercera edad: ".$descEdad; ?><br>
+        Impuesto = valor catastral * factor del tipo de Predio = 
+        <?php echo $valorCatastral. " * ".$factor." = ".$impuesto; ?><br>
+        Impuesto Ajustado: 
+        <?php echo $impuestoAjustado?><br>
+        Descuento por tercera edad:
+        <?php echo $descEdad; ?><br>
         <?php echo $impuestoDescEdad;?><br>
-        <?php echo "Descuento por pago con tarjeta: ".$descTarjeta; ?><br>
+        Descuento por pago con tarjeta:
+        <?php echo $descTarjeta; ?><br>
         <?php echo $impuestoFinal;?><br>
 
 
