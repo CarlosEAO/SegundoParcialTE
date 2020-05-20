@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
     <!-------CSS BOOSTRAP------------>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <script src="script/script.js" type="text/javascript"></script>
 
     <title>Calculadora Predial Pro</title>
 </head>
@@ -20,7 +22,7 @@
 
     <div class="container-fluid" id="cf1">
         <!---------FORM 1-------------->
-        <form action="reporte.php" method="POST">
+        <form action="reporte.php" method="POST" onsubmit="return validate()">
         <div class="row">
             <div class="col">
                 <h4>Información personal</h4>
@@ -38,7 +40,7 @@
              </div>
              <div class="col-md-4 col-sm-12 mt-2">
                 <label for="edad"><h5>Edad</h5></label>
-                <input type="number" class="form-control" id="edad" name="edad"  required>
+                <input type="number" min="0" class="form-control" id="edad" name="edad"  required>
              </div>
              <div class="col-md-4 col-sm-12 mt-2">
                 <label for="cuentaCastral"><h5>Número de cuenta catastral</h5></label>
@@ -89,8 +91,8 @@
          <div class="row my-2">
 
              <div class="col-md-6 col-sm-12">
-                 <label for="areaP"><h5>Área del predio</h5></label>
-                <input type="text" class="form-control" id="areaP" name="areaP"  required>
+                <label for="areaP"><h5>Área del predio en m2</h5></label>
+                <input type="number" min="0" class="form-control" id="areaP" name="areaP" step = "0.1"  required>
              </div>
 
              <div class="col">
@@ -105,7 +107,7 @@
          </div>
          <div class="row my-3">
             <div class="col">
-                <button type="submit" class="btn btn-dark" name="">Calcular Impuesto Predial y guardar registro en la bd</button>
+                <button type="submit" class="btn btn-dark" id="submit">Calcular Impuesto Predial y guardar registro en la bd</button>
             </div>
          </div>
          
@@ -120,6 +122,5 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-    <script src="script/script.js" type="text/javascript"></script>
 </body>
 </html>
