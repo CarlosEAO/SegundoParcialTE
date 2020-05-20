@@ -4,7 +4,7 @@
   $prom_fin = (($grade1+$grade2+$grade3+$grade4+$grade5));
 
   $prom = (($prom_fin/5));
-  
+
   $prom_fin = round($prom);
 
   if($prom_fin>=6){
@@ -46,19 +46,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <link rel="stylesheet" href="css/reporte.css">
-    
+
     <!-------GOOGLE FONTS------------>
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet">
     <!-------CSS BOOSTRAP------------>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    
+
     <title>Creador de Reportes Pro</title>
 </head>
 <body>
-<div class="container-fluid my-2" id="cf1">
-      
+<div class="container my-2" id="cf1">
+
        <div class="row">
            <div class="col">
                <h3>Reporte de Calificaciones</h3>
@@ -83,7 +83,7 @@
                <td id="group"><?php echo $group;?></td>
            </tr>
        </tbody>
-        
+
    </table>
        <table class="table table-hover" id="tabla2">
           <thead class="thead-dark">
@@ -131,15 +131,15 @@
         <form action="index.php">
           <button type="submit" class="btn btn-success">Registrar otro alumno</button>
         </form>
-    
+
 </div>
 
-    
-        
+
+
 
     <!-------JS BOOSTRAP------------>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
