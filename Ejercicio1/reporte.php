@@ -126,7 +126,7 @@
         VALUES ('$nombreTitular', '$apellidosTitular', '$edad', '$cuenta', '$domicilio', '$delegacion', '$areaP', '$selectTipoP', '$impuestoFinal')";
         // use exec() because no results are returned
         $conn->exec($sql);
-        echo "New record created successfully";
+        echo "Datos insertados correctamente";
     } catch(PDOException $e) {
         echo $sql . "<br>" . $e->getMessage();
     }

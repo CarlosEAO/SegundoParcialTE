@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <link rel="stylesheet" href="css/index.css">
+    <script src="script/script.js" type="text/javascript"></script>
     
     <!-------GOOGLE FONTS------------>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap" rel="stylesheet">
@@ -22,7 +23,7 @@
                      <img src="img/logo.png" alt="">
                  </div>
              </div>
-             <form action="reporte.php" method="post">
+             <form action="reporte.php" method="post" onsubmit="return validate()"> 
                 <div class="row">
                     <div class="col-md-6 col-sm-12">
                         <label for="name">Nombre del Titular</label>
@@ -67,7 +68,7 @@
                  <div class="row">
                    <div class="col">
                        <label for="lt">Consumo</label>
-                     <input class="form-control" type="number" min="1" aria-describedby="ayuda" id="lt" name="lt" required>
+                     <input class="form-control" type="number" min="0" step="0.1" aria-describedby="ayuda" id="lt" name="lt" required>
                      <small id="ayuda" class="form-text text-muted">Metros cubicos consumidos</small>
                    </div>
                </div>

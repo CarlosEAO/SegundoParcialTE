@@ -51,7 +51,7 @@
         VALUES ('$name', '$lastname', '$age', '$contract', '$dom', '$zone', '$lt', '$consumoFinal')";
         // use exec() because no results are returned
         $conn->exec($sql);
-        echo "New record created successfully";
+        echo "Datos insertados correctamente";
     } catch(PDOException $e) {
         echo $sql . "<br>" . $e->getMessage();
     }

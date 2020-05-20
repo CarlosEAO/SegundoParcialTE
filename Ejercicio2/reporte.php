@@ -31,7 +31,7 @@
         VALUES ('$name', '$lastname', '$grade', '$group', '$grade1', '$grade2', '$grade3', '$grade4', '$grade5', '$prom_fin', '$status')";
         // use exec() because no results are returned
         $conn->exec($sql);
-        echo "New record created successfully";
+        echo "Datos insertados correctamente";
     } catch(PDOException $e) {
         echo $sql . "<br>" . $e->getMessage();
     }

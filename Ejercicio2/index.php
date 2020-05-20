@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <link rel="stylesheet" href="css/index.css">
+    <script src="script/script.js" type="text/javascript"></script>
     
     <!-------GOOGLE FONTS------------>
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet">
@@ -23,7 +24,7 @@
        </div>
    </div>
     <div class="container-fluid my-5" id="cf2">
-       <form action="reporte.php" method="post">
+       <form action="reporte.php" method="post" onsubmit="return validate()">
            <div class="row" id="rowMain">
             <div class="col-md-6 col-sm-12" id="col1">
                  <div class="row">
